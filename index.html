@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ecommerce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top custom-nav">
+  <div class="container">
+
+    <a class="navbar-brand" href="#">
+  <img src="orglogo.webp" alt="Logo" class="logo-img">
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Men.html">Men</a></li>
+            <li><a class="dropdown-item" href="Women.html">Women</a></li>
+            <li><a class="dropdown-item" href="Kids.html">Kids</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Dashboard.html">Dashboard</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="Blog.html">Blog</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="Contact.html">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle fs-5"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="login.html">Login</a></li>
+            <li><a class="dropdown-item" href="Register.html">Register</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+<!-- <div class="nav-space"></div> -->
+<div id="fashionCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#fashionCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#fashionCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#fashionCarousel" data-bs-slide-to="2"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="slider1fashion.jpg"
+           class="d-block w-100 carousel-img" alt="Men Collection">
+
+      <div class="carousel-caption">
+        <span class="badge bg-danger mb-3">Men Collection</span>
+        <h1 class="display-4 fw-bold">NEW COLLECTION</h1>
+        <p>Mens New Collections and  New Fashion Design</p>
+        <a href="error.html" class="btn btn-danger px-4">Shop Now</a>
+        <a href="error.html" class="btn btn-light px-4">Collection</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1100&q=50"
+           class="d-block w-100 carousel-img" alt="Best Shopping">
+
+      <div class="carousel-caption">
+        <span class="badge bg-danger mb-3">New Year 2026</span>
+        <h1 class="display-4 fw-bold">BEST SHOPPING</h1>
+        <p>New Year Best Sale  </p>
+        <a href="error.html" class="btn btn-danger px-4">Shop Now</a>
+        <a href="error.html" class="btn btn-light px-4">Collection</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?w=1100&q=50"
+           class="d-block w-100 carousel-img" alt="Women Fashion">
+
+      <div class="carousel-caption">
+        <span class="badge bg-danger mb-3">Women Fashion</span>
+        <h1 class="display-4 fw-bold">NEW COLLECTION</h1>
+        <p>Women's New Collections and  New Fashion Design </p>
+        <a href="error.html" class="btn btn-danger px-4">Shop Now</a>
+        <a href="error.html" class="btn btn-light px-4">Collection</a>
+      </div>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button"
+          data-bs-target="#fashionCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button"
+          data-bs-target="#fashionCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+<section class="new-arrivals py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">NEW ARRIVALS</h2>
+
+    <div class="product-slider-wrapper">
+
+      <button class="slider-btn left-btn">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+
+      <div class="product-slider" id="productSlider">
+        <div class="product-card">
+          <img src="shirt1.jpg">
+          <h6>Easy-Fit Shirt: Clover</h6>
+          <p>₹ 1399</p>
+        </div>
+        <div class="product-card">
+          <img src="shirt2.avif">
+          <h6>Batman: Dark Rule</h6>
+          <p>₹ 1799</p>
+        </div>
+        <div class="product-card">
+          <img src="shirt3.webp">
+          <h6>Black Clover: Yuno</h6>
+          <p>₹ 999</p>
+        </div>
+        <div class="product-card">
+          <img src="shirt4.webp">
+          <h6>Hoops: Batman</h6>
+          <p>₹ 3999</p>
+        </div>
+        <div class="product-card">
+          <img src="shirt5.jpg">
+          <h6>Premium Jacket</h6>
+          <p>₹ 2499</p>
+        </div>
+        <div class="product-card">
+          <img src="shirt6.jpg">
+          <h6>One Piece Pirate</h6>
+          <p>₹ 2999</p>
+        </div>
+
+      </div>
+      <button class="slider-btn right-btn">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+
+    </div>
+  </div>
+</section>
+<section class="categories py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">CATEGORIES</h2>
+
+    <div class="row g-4">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="category-card">
+          <img src="cat1.jpg" alt="">
+          <div class="category-overlay">
+            <h5>T-SHIRTS</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="category-card">
+          <img src="cat2.jpg" alt="">
+          <div class="category-overlay">
+            <h5>SHIRTS</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="category-card">
+          <img src="cat3.avif" alt="">
+          <div class="category-overlay">
+            <h5>POLOS</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="category-card">
+          <img src="cat4.webp" alt="">
+          <div class="category-overlay">
+            <h5>PANTS</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="category-card">
+          <img src="cat5.jpg" alt="">
+          <div class="category-overlay">
+            <h5>JEANS</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="category-card">
+          <img src="cat6.webp" alt="">
+          <div class="category-overlay">
+            <h5>FULL SHIRTS</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="category-card">
+          <img src="cat7.jpg" alt="">
+          <div class="category-overlay">
+            <h5>JOGGERS</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="category-card">
+          <img src="cat8.webp" alt="">
+          <div class="category-overlay">
+            <h5>STREET STAIN</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="sale-banner text-center">
+    <div class="sale-content">
+        <p class="sale-subtitle">LIMITED TIME OFFER</p>
+        <h1 class="sale-title">FLAT 50% OFF</h1>
+        <p class="sale-desc">On Selected Men's & Women's Collection</p>
+
+        <a href="error.html" class="sale-btn">
+            Shop Now
+        </a>
+    </div>
+</section>
+<section class="why-choose py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Why Shop  Us</h2>
+    <div class="row text-center g-4">
+
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="feature-box">
+          <i class="bi bi-truck"></i>
+          <h5>Free Shipping</h5>
+          <p>On all orders above ₹999</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="feature-box">
+          <i class="bi bi-arrow-repeat"></i>
+          <h5>Easy Returns</h5>
+          <p>7 days return policy</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="feature-box">
+          <i class="bi bi-shield-lock"></i>
+          <h5>Secure Payment</h5>
+          <p>100% secure transactions</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="feature-box">
+          <i class="bi bi-headset"></i>
+          <h5>24/7 Support</h5>
+          <p>Dedicated customer service</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="newsletter-section">
+  <div class="newsletter-overlay"></div>
+
+  <div class="container text-center newsletter-content">
+    <h2 class="newsletter-title">Stay Updated</h2>
+    <p class="newsletter-subtitle">
+      Subscribe to get special offers, free giveaways & latest updates.
+    </p>
+
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email address" required>
+      <a href="error.html" class="subscribe-btn">Subscribe</a>
+    </form>
+  </div>
+</section>
+<footer class="footer-section">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+  
+  <div class="footer-logo mb-3">
+    <img src="orglogo.webp" alt="Stackly Logo" width="140">
+  </div>
+
+  <h5>Contacts</h5>
+
+  <p>
+    <i class="bi bi-geo-alt-fill"></i>
+    4060 Reppert Coal Road Jackson,<br>
+    MS 39201 USA
+  </p>
+
+  <p>
+    <i class="bi bi-telephone-fill"></i>
+    (+123) 685 78 <br>
+    (+064) 987 245
+  </p>
+
+  <p>
+    <i class="bi bi-envelope-fill"></i>
+    contact@stackly.com <br>
+    support@stackly.com
+  </p>
+
+</div>
+
+      <div class="col-lg-3 col-md-6">
+        <h5>Information</h5>
+        <ul>
+          <li><a href="error.html">About Us</a></li>
+          <li><a href="error.html">Delivery Information</a></li>
+          <li><a href="error.html">Privacy Policy</a></li>
+          <li><a href="error.html">Terms & Conditions</a></li>
+          <li><a href="error.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="error.html">Returns</a></li>
+          <li><a href="error.html">Site Map</a></li>
+          <li><a href="error.html">Wish List</a></li>
+          <li><a href="error.html">My Account</a></li>
+          <li><a href="error.html">Order History</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Join Us Newsletter</h5>
+        <p>Subscribe to get updates & latest offers.</p>
+
+        <div class="footer-newsletter">
+          <input type="email" placeholder="Enter Your Email">
+          <a href="error.html" class="footer-btn">
+            <i class="bi bi-send"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="footer-social text-center">
+  <a href="error.html"><i class="bi bi-facebook"></i></a>
+  <a href="error.html"><i class="bi bi-pinterest"></i></a>
+  <a href="error.html"><i class="bi bi-linkedin"></i></a>
+  <a href="error.html"><i class="bi bi-twitter"></i></a>
+  <a href="error.html"><i class="bi bi-instagram"></i></a>
+</div>
+  <div class="footer-bottom text-center">
+    <p>&copy; 2026 Stackly. All rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="nav.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

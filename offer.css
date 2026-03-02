@@ -1,0 +1,174 @@
+body{
+    overflow-x: hidden;
+}
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+}
+.navbar {
+    padding: 10px 0;
+}
+
+.navbar .form-control {
+    border-radius: 6px;
+}
+
+.navbar .btn {
+    border-radius: 6px;
+}
+
+.navbar .nav-link:hover {
+    color: orange ;
+}
+
+body {
+    padding-top: 70px;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 20px;
+}
+.dropdown-menu{
+    background-color: #1f2428; 
+    border: none;
+}
+.dropdown-item {
+    color: #ffffff;
+}
+.dropdown-item:hover {
+    background-color: #ff6b00;  
+    color: #ffffff;
+}
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #ff6b00 ;
+    color: #ffffff ;
+}
+.navbar .bi {
+    transition: 0.3s ease;
+}
+
+.navbar .bi:hover {
+    color: #ff6b00;   
+}
+
+
+@media (max-width: 991px) {
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+
+  .navbar-collapse {
+    padding: 15px 0;
+  }
+
+  .navbar-collapse .dropdown-menu {
+    position: static;
+    float: none;
+    background-color: #2c2f33;
+     border: none;
+  }
+   .navbar-collapse .dropdown-item {
+        color: #fff;
+    }
+
+  .navbar hr {
+    margin: 15px 0;
+  }
+ .mobile-icons-wrapper {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .navbar-collapse .dropdown-item:hover {
+        background-color: #444;
+    }
+
+  .mobile-icons {
+    width: 100%;
+  }
+
+  .mobile-icons a,
+  .mobile-icons .dropdown {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-collapse .dropdown-menu {
+    position: absolute ;
+  }
+  .navbar .bi:hover {
+    color: #ff6b00;   
+}
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #ff6b00 ;
+    color: #ffffff ;
+}
+
+}
+.offer-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=40') center/cover;
+    height: 60vh;
+}
+
+.offer-card img {
+    height: 250px;
+     width: 100%;
+    object-fit: cover; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.offer-card {
+    transition: 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-8px);
+}
+
+
+.limited-offer {
+    background-color: #ff6b00;
+}
+.footer-section {
+    background-color: #1f2428;
+    color: #ffffff;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff6b00;
+}
+
+.social-icons a {
+    color: #ffffff;
+    margin-right: 12px;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff6b00;
+}
+
+.footer-section hr {
+    border-color: #444;
+}
+
+

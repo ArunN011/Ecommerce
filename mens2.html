@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"> 
+    <title>Document</title>
+    <link rel="stylesheet" href="mens2.css">
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+      <img src="orglogo.webp" alt="Logo" height="35" class="me-2">
+    </a>
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            Home
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            Categories
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="mens2.html">Men</a></li>
+            <li><a class="dropdown-item" href="women2.html">Women</a></li>
+            <li><a class="dropdown-item" href="#">Kids</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="offer.html">Offers</a></li>
+        <li class="nav-item"><a class="nav-link" href="Trackorder.html">Track Order</a></li>
+        <li class="nav-item"><a class="nav-link" href="Dashboard2.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact2.html">Contact</a></li>
+
+      </ul>
+      <hr class="text-secondary d-lg-none">
+      <div class="d-flex justify-content-center justify-content-lg-end align-items-center gap-4 pb-3 pb-lg-0">
+
+        <a href="#" class="text-white">
+          <i class="bi bi-heart fs-5"></i>
+        </a>
+
+        <a href="#" class="text-white">
+          <i class="bi bi-cart fs-5"></i>
+        </a>
+        <div class="dropdown">
+          <a href="#"
+             class="text-white"
+             data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle fs-5"></i>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="Login2.html">Login</a></li>
+            <li><a class="dropdown-item" href="register2.html">Register</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</nav>
+<section class="mens-hero">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Men's Collection</h1>
+    <p class="lead">Discover the latest trends in men's fashion</p>
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 mb-4">
+        <div class="p-4 shadow-sm bg-white rounded">
+          <h5 class="fw-bold mb-3">Filters</h5>
+
+          <h6>Size</h6>
+          <div class="form-check"><input class="form-check-input" type="checkbox"> S</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox"> M</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox"> L</div>
+
+          <hr>
+
+          <h6>Price</h6>
+          <div class="form-check"><input class="form-check-input" type="checkbox"> Under $30</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox"> $30 - $60</div>
+
+          <hr>
+
+          <h6>Brand</h6>
+          <div class="form-check"><input class="form-check-input" type="checkbox"> Stackly</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox"> UrbanWear</div>
+        </div>
+      </div>
+      <div class="col-lg-9">
+
+        <h3 class="mb-4">All Products</h3>
+
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card product-card position-relative">
+
+              <span class="discount-badge">30% OFF</span>
+
+              <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+              </button>
+
+              <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=600&q=60" class="card-img-top">
+
+              <div class="card-body text-center d-flex flex-column">
+                <h6 class="fw-bold">Denim Jacket</h6>
+                <p>$49 <span class="old-price">$70</span></p>
+
+                <div class="d-flex gap-2">
+                  <button class="btn btn-cart w-100" onclick="location.href='error2.html'">
+                    <i class="bi bi-cart"></i>
+                  </button>
+
+                  <button class="btn btn-outline-dark eye-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                    onclick="openModal('Denim Jacket','$49','$70','30% OFF','https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=600&q=60')">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card product-card position-relative">
+              <span class="discount-badge">20% OFF</span>
+
+              <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+              </button>
+
+              <img src="https://images.unsplash.com/photo-1602810316498-ab67cf68c8e1?auto=format&fit=crop&w=600&q=60" class="card-img-top">
+
+              <div class="card-body text-center d-flex flex-column">
+                <h6 class="fw-bold">Formal Shirt</h6>
+                <p>$35 <span class="old-price">$58</span></p>
+
+                <div class="d-flex gap-2">
+                  <button class="btn btn-cart w-100" onclick="location.href='error2.html'">
+                    <i class="bi bi-cart"></i>
+                  </button>
+
+                  <button class="btn btn-outline-dark eye-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                    onclick="openModal('Formal Shirt','$35','$58','20% OFF','https://images.unsplash.com/photo-1602810316498-ab67cf68c8e1?auto=format&fit=crop&w=600&q=60')">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card product-card position-relative">
+              <span class="discount-badge">40% OFF</span>
+
+              <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+              </button>
+
+              <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=600&q=60" class="card-img-top">
+
+              <div class="card-body text-center d-flex flex-column">
+                <h6 class="fw-bold">Slim Fit Jeans</h6>
+                <p>$45 <span class="old-price">$60</span></p>
+
+                <div class="d-flex gap-2">
+                  <button class="btn btn-cart w-100" onclick="location.href='error2.html'">
+                    <i class="bi bi-cart"></i>
+                  </button>
+
+                  <button class="btn btn-outline-dark eye-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                    onclick="openModal('Slim Fit Jeans','$45','$60','40% OFF','https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=600&q=60')">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+       
+         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card product-card position-relative ">
+              <span class="discount-badge">50% OFF</span>
+
+              <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+              </button>
+
+              <img src="casualshirt1.webp" class="card-img-top">
+
+              <div class="card-body text-center d-flex flex-column">
+                <h6 class="fw-bold">Casual Shirt</h6>
+                <p>$55 <span class="old-price">$98</span></p>
+
+                <div class="d-flex gap-2">
+                  <button class="btn btn-cart w-100" onclick="location.href='error2.html'">
+                    <i class="bi bi-cart"></i>
+                  </button>
+
+                  <button class="btn btn-outline-dark eye-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                    onclick="openModal('Casual shirt','$55','$98','50% OFF','casualshirt1.webp')">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card product-card position-relative">
+              <span class="discount-badge">20% OFF</span>
+
+              <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+              </button>
+
+              <img src="hoodiehome2.jpg" class="card-img-top">
+
+              <div class="card-body text-center d-flex flex-column">
+                <h6 class="fw-bold">Hoodie</h6>
+                <p>$55 <span class="old-price">$78</span></p>
+
+                <div class="d-flex gap-2">
+                  <button class="btn btn-cart w-100" onclick="location.href='error2.html'">
+                    <i class="bi bi-cart"></i>
+                  </button>
+
+                  <button class="btn btn-outline-dark eye-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                    onclick="openModal('Hoodie','$55','$78','20% OFF','hoodiehome2.jpg')">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card product-card position-relative ">
+              <span class="discount-badge">25% OFF</span>
+
+              <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+              </button>
+
+              <img src="blacktshirthome2.jpg" class="card-img-top">
+
+              <div class="card-body text-center d-flex flex-column">
+                <h6 class="fw-bold">Black T-shirt</h6>
+                <p>$39 <span class="old-price">$48</span></p>
+
+                <div class="d-flex gap-2">
+                  <button class="btn btn-cart w-100" onclick="location.href='error2.html'">
+                    <i class="bi bi-cart"></i>
+                  </button>
+
+                  <button class="btn btn-outline-dark eye-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                    onclick="openModal('Black T-shirt','$39','$48','50% OFF','blacktshirthome2.jpg')">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card product-card position-relative ">
+              <span class="discount-badge">50% OFF</span>
+
+              <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+              </button>
+
+              <img src="printedhome2.jpg" class="card-img-top">
+
+              <div class="card-body text-center d-flex flex-column">
+                <h6 class="fw-bold">Printed Shirt</h6>
+                <p>$55 <span class="old-price">$98</span></p>
+
+                <div class="d-flex gap-2">
+                  <button class="btn btn-cart w-100" onclick="location.href='error2.html'">
+                    <i class="bi bi-cart"></i>
+                  </button>
+
+                  <button class="btn btn-outline-dark eye-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                    onclick="openModal('Printed Shirt','$55','$98','50% OFF','printedhome2.jpg')">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card product-card position-relative ">
+              <span class="discount-badge">50% OFF</span>
+
+              <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+              </button>
+
+              <img src="hom2cart1.avif" class="card-img-top">
+
+              <div class="card-body text-center d-flex flex-column">
+                <h6 class="fw-bold">Blue Shirt</h6>
+                <p>$55 <span class="old-price">$98</span></p>
+
+                <div class="d-flex gap-2">
+                  <button class="btn btn-cart w-100" onclick="location.href='error2.html'">
+                    <i class="bi bi-cart"></i>
+                  </button>
+
+                  <button class="btn btn-outline-dark eye-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                    onclick="openModal('Blue shirt','$55','$98','50% OFF','hom2cart1.avif')">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+        <nav class="mt-5">
+          <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="error2.html">Previous</a></li>
+            <li class="page-item active"><a class="page-link">1</a></li>
+            <li class="page-item"><a class="page-link" href="error2.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="error2.html">Next</a></li>
+          </ul>
+        </nav>
+           <div class="modal fade" id="productModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Product</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row align-items-center">
+
+          <div class="col-md-6 text-center">
+            <img id="modalImage" src="" class="img-fluid rounded" style="max-height:320px;">
+          </div>
+
+          <div class="col-md-6">
+            <h3 class="fw-bold mb-3">
+              <span id="modalPrice"></span>
+              <span id="modalOldPrice"
+                    class="text-muted text-decoration-line-through ms-2"></span>
+            </h3>
+
+            <div class="mb-3">
+              <span id="modalDiscount"
+                    class="badge bg-warning text-dark fs-6 px-3 py-2"></span>
+            </div>
+
+            <button class="btn btn-cart px-4 py-2"
+                    onclick="location.href='error2.html'">
+              <i class="bi bi-cart"></i> Add to Cart
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+ 
+
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer-section pt-5 pb-4">
+  <div class="container">
+
+    <div class="row g-4">
+
+      <div class="col-lg-3 col-md-6">
+        <img src="orglogo.webp" alt="Logo" height="40" class="mb-3">
+        <p class="small">
+          Stackly is your one-stop fashion destination for premium brands,
+          latest trends, and unbeatable offers.
+        </p>
+        <div class="social-icons mt-3">
+          <a href="error2.html"><i class="bi bi-facebook"></i></a>
+          <a href="error2.html"><i class="bi bi-instagram"></i></a>
+          <a href="error2.html"><i class="bi bi-twitter-x"></i></a>
+          <a href="error2.html"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-bold mb-3">Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="home2.html">Home</a></li>
+          <li><a href="error2.html">Shop</a></li>
+          <li><a href="offer.html">Offers</a></li>
+          <li><a href="contact2.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-bold mb-3">Categories</h6>
+        <ul class="footer-links">
+          <li><a href="mens2.html">Men</a></li>
+          <li><a href="women2.html">Women</a></li>
+          <li><a href="error2.html">Kids</a></li>
+          <li><a href="error2.html">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-bold mb-3">Subscribe</h6>
+        <p class="small">Get updates about latest deals</p>
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Your Email">
+          <button class="btn btn-warning">Join</button>
+        </div>
+      </div>
+
+    </div>
+    <hr class="mt-4">
+
+    <div class="text-center small">
+      &copy; 2026 Stackly. All rights reserved.
+
+    </div>
+
+  </div>
+  
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  window.openModal = function(title, price, oldPrice, discount, image){
+
+    document.getElementById("modalTitle").textContent = title;
+    document.getElementById("modalPrice").textContent = price;
+    document.getElementById("modalOldPrice").textContent = oldPrice;
+    document.getElementById("modalDiscount").textContent = discount;
+    document.getElementById("modalImage").src = image;
+
+  };
+var productModal = document.getElementById('productModal');
+
+productModal.addEventListener('hidden.bs.modal', function () {
+    document.activeElement.blur();
+});
+});
+function toggleWishlist(btn){
+    if(!btn) return;
+
+    btn.classList.toggle("active");
+
+    const icon = btn.querySelector("i");
+    if(!icon) return;
+
+    if(btn.classList.contains("active")){
+        icon.classList.remove("bi-heart");
+        icon.classList.add("bi-heart-fill");
+    } else {
+        icon.classList.remove("bi-heart-fill");
+        icon.classList.add("bi-heart");
+    }
+}
+</script>
+</body>
+</html>

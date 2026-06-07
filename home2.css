@@ -1,6 +1,4 @@
-body{
-    overflow-x: hidden;
-}
+
 .navbar-brand img {
     height: 40px;
     width: auto;
@@ -106,246 +104,475 @@ body {
 }
 
 }
+body {
+  overflow-x: hidden;
+  padding-top: 70px;
+  font-family: "Inter", Arial, sans-serif;
+  color: #0f172a;
+  background:
+    radial-gradient(circle at top left, rgba(212, 175, 55, 0.10), transparent 26%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.09), transparent 22%),
+    linear-gradient(180deg, #ffffff 0%, #f6f8fc 40%, #eef2f7 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, rgba(255,255,255,0.35), transparent 35%),
+    linear-gradient(240deg, rgba(255,255,255,0.18), transparent 42%);
+  z-index: -1;
+}
+
 .carousel-item {
-    position: relative;
-    height: 85vh;
+  position: relative;
+  height: 86vh;
+  overflow: hidden;
 }
 
 .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s ease;
+}
+
+.carousel-item:hover img {
+  transform: scale(1.04);
 }
 
 .carousel-item::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    top: 0;
-    left: 0;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(8, 15, 30, 0.72) 0%, rgba(8, 15, 30, 0.30) 55%, rgba(8, 15, 30, 0.12) 100%),
+    linear-gradient(to top, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.02));
+  z-index: 1;
 }
+
 .custom-caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%);
-    color: #fff;
-    z-index: 2;
-    max-width: 500px;
-    text-align: center; 
-    font-size: 50px;
-    color: rgb(251, 5, 5);
-} 
-.custom-caption button{
-    color: #d81919;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 2;
+  max-width: 560px;
+  text-align: left;
+  color: #fff;
+  animation: fadeUp 1s ease;
 }
 
 .custom-caption h1 {
-    font-size: 48px;
-    font-weight: 700;
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  text-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 .custom-caption p {
-    font-size: 20px;
-    margin: 15px 0;
+  font-size: 1.1rem;
+  margin: 14px 0 26px;
+  color: rgba(255,255,255,0.88);
 }
 
-@media (max-width: 768px) {
-    .carousel-item {
-        height: 45vh;
-    }
-
-    .custom-caption h1 {
-        font-size: 24px;
-    }
-
-    .custom-caption p {
-        font-size: 14px;
-    }
-    .carousel-control-prev-icon.carousel-control-next-icon{
-        display: none;
-    }
-    .carousel-item img {
-        height: 55vh;           
-        object-fit: cover;
-        object-position: center top;   
-    }
+.custom-caption .btn {
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: none;
+  background: linear-gradient(135deg, #d4af37, #a77f12);
+  color: #111827;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+  transition: 0.3s ease;
 }
-.product-card img {
-    height: 250px;
-    object-fit: cover;
+
+.custom-caption .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(212, 175, 55, 0.24);
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  z-index: 3;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d4af37;
+}
+
+
+section .text-center h2 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #0f172a;
+}
+
+section .text-center h2::after {
+  content: "";
+  display: block;
+  width: 82px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #d4af37, #8b6b15);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.22);
+}
+
 
 .product-card {
-    transition: 0.3s ease;
+  border: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(12px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  height: 100%;
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 28px 65px rgba(15, 23, 42, 0.14);
 }
+
+.product-card img {
+  height: 290px;
+  object-fit: cover;
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.06);
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.product-card .card-body {
+  padding: 18px 18px 20px;
+}
+
+.product-card .card-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.product-card .btn {
+  border-radius: 999px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  border: none;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  transition: 0.3s ease;
+}
+
+.product-card .btn:hover {
+  background: linear-gradient(135deg, #d4af37, #a77f12);
+  color: #111827;
+  transform: translateY(-2px);
+}
+
+
 .feature-box {
-    transition: 0.3s ease;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  transition: 0.35s ease;
+  height: 100%;
+  border-radius: 22px !important;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(12px);
 }
 
 .feature-box:hover {
-    transform: translateY(-5px);
-}
-.edit-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
+  transform: translateY(-8px);
+  box-shadow: 0 22px 48px rgba(15, 23, 42, 0.14);
 }
 
-.edit-card img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    transition: 0.4s ease;
+.feature-box i {
+  color: #d4af37 !important;
+  transition: 0.3s ease;
 }
 
-.edit-card:hover img {
-    transform: scale(1.05);
+.feature-box:hover i {
+  transform: scale(1.08);
 }
-.edit-overlay {
-    position: absolute;
-    bottom: 15px;
-    left: 20px;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-@media (max-width: 768px) {
-    .edit-card img {
-        height: 220px;
-    }
 
-    .edit-overlay {
-        font-size: 16px;
-    }
-}
+
+.edit-card,
 .lookbook-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  cursor: pointer;
+  background: #fff;
 }
 
+.edit-card img,
 .lookbook-card img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    transition: 0.4s ease;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  transition: transform 0.45s ease, filter 0.45s ease;
 }
 
+.edit-card:hover img,
 .lookbook-card:hover img {
-    transform: scale(1.05);
+  transform: scale(1.08);
+  filter: saturate(1.05);
 }
+
+.edit-card::after,
+.lookbook-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.62), rgba(0,0,0,0.05));
+  opacity: 0;
+  transition: 0.35s ease;
+}
+
+.edit-card:hover::after,
+.lookbook-card:hover::after {
+  opacity: 1;
+}
+
+.edit-overlay,
 .lookbook-overlay {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    letter-spacing: 1px;
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 2;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
-@media (max-width: 768px) {
-    .lookbook-card img {
-        height: 220px;
-    }
-
-    .lookbook-overlay {
-        font-size: 14px;
-    }
+.edit-card + p,
+.lookbook-card + p {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #111827;
 }
+
+
 .review-card {
-    transition: 0.4s ease;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.8s ease forwards;
-}
-
-.review-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-.review-card:nth-child(3) {
-    animation-delay: 0.4s;
+  transition: 0.4s ease;
+  opacity: 0;
+  transform: translateY(28px);
+  animation: fadeUp 0.8s ease forwards;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
 }
 
 .review-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.12) !important;
+}
+
+.review-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.review-card:nth-child(3) {
+  animation-delay: 0.4s;
 }
 
 .review-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #d4af37;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
 .stars i {
-    color: #ffc107;
+  color: #f5b301;
+  margin: 0 1px;
 }
 
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .review-card {
-        margin-bottom: 15px;
-    }
-}
 .insta-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
 }
 
 .insta-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: 0.4s ease;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
 }
 
 .insta-card:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .insta-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: 0.4s ease;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.45);
+  transition: 0.35s ease;
 }
 
 .insta-overlay i {
-    color: #d81919;
-    font-size: 28px;
+  color: #fff;
+  font-size: 2rem;
+  transform: scale(0.8);
+  transition: 0.35s ease;
 }
 
 .insta-card:hover .insta-overlay {
+  opacity: 1;
+}
+
+.insta-card:hover .insta-overlay i {
+  transform: scale(1.1);
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-item {
+    height: 60vh;
+  }
+
+  .custom-caption {
+    left: 6%;
+    max-width: 80%;
+  }
+
+  .edit-card img,
+  .lookbook-card img {
+    height: 280px;
+  }
+
+  .insta-card img {
+    height: 180px;
+  }
 }
 
 @media (max-width: 768px) {
-    .insta-card img {
-        height: 150px;
-    }
+  .carousel-item {
+    height: 48vh;
+  }
+
+  .custom-caption {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 92%;
+  }
+
+  .custom-caption h1 {
+    font-size: 2rem;
+  }
+
+  .custom-caption p {
+    font-size: 0.95rem;
+  }
+
+  .product-card img {
+    height: 240px;
+  }
+
+  .edit-card img,
+  .lookbook-card img {
+    height: 220px;
+  }
+
+  .insta-card img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-caption h1 {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+  }
+
+  .custom-caption .btn {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+
+  .product-card {
+    border-radius: 18px;
+  }
+
+  .product-card img {
+    height: 220px;
+  }
+
+  .feature-box {
+    padding: 18px !important;
+  }
+
+  .edit-overlay,
+  .lookbook-overlay {
+    font-size: 0.95rem;
+    left: 14px;
+    bottom: 14px;
+  }
+
+  .review-img {
+    width: 74px;
+    height: 74px;
+  }
+
+  .insta-card img {
+    height: 140px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+
+  .product-card,
+  .product-card img,
+  .feature-box,
+  .edit-card img,
+  .lookbook-card img,
+  .insta-card img,
+  .review-card,
+  .custom-caption,
+  .insta-overlay {
+    transition: none !important;
+    animation: none !important;
+  }
 }
 .footer-section {
     background-color: #1f2428;
